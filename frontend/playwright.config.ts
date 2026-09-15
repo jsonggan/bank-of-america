@@ -1,0 +1,4 @@
+import { defineConfig, devices } from "@playwright/test";
+import { resolve } from "node:path";
+const root = resolve(import.meta.dirname, "..");
+export default defineConfig({ testDir: "./e2e", fullyParallel: false, workers: 1, use: { baseURL: "http://127.0.0.1:5174", trace: "retain-on-failure", screenshot: "only-on-failure" }, projects: [{ name: "chromium", use: { ...devices["Desktop Chrome"] } }], webServer: [{ command: "uv run --locked uvicorn backend.src.app:create_app --factory --host 127.0.0.1 --port 8001 --workers 1", cwd: resolve(root, "backend"), url: "http://127.0.0.1:8001/openapi.json", reuseExistingServer: false, timeout: 30000 }, { command: "npm run dev -- --port 5174", url: "http://127.0.0.1:5174", env: { API_TARGET: "http://127.0.0.1:8001" }, reuseExistingServer: false, timeout: 30000 }] });

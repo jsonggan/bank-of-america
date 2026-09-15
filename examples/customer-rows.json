@@ -1,0 +1,4 @@
+{
+  "schema": "customer",
+  "rows": [{"customerId": "C001", "name": "Alex", "country": "SG"}]
+}

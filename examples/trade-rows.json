@@ -1,0 +1,4 @@
+{
+  "schema": "trade",
+  "rows": [{"tradeId":"T001","amount":1000,"status":"OPEN"},{"tradeId":"T002","amount":2500,"status":"CLOSED"},{"tradeId":"T003","amount":-500}]
+}

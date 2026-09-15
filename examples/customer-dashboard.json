@@ -1,8 +1,5 @@
 {
   "name": "customer-dashboard",
   "schema": "customer",
-  "views": [
-    {"type": "summary", "field": "balance", "operation": "sum"},
-    {"type": "table", "columns": ["customer_id", "name", "balance"]}
-  ]
+  "views": [{"type": "table", "columns": ["customerId", "name", "country"]}]
 }
