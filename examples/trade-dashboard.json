@@ -1,0 +1,8 @@
+{
+  "name": "trade-dashboard",
+  "schema": "trade",
+  "views": [
+    {"type": "summary", "field": "amount", "operation": "sum"},
+    {"type": "table", "columns": ["trade_id", "symbol", "amount"]}
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "trade",
+  "fields": {
+    "trade_id": {"type": "string", "required": true},
+    "symbol": {"type": "string", "required": true},
+    "amount": {"type": "number", "required": true}
+  }
+}
